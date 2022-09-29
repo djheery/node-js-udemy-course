@@ -1,0 +1,34 @@
+# Course Outline
+
+- Getting Started
+- JavaScript Refresher
+- NodeJS Basics
+- Efficient Development 
+- Using Express.js
+- Templating Engines 
+- Model-View-Controller
+- Routing Concepts 
+- Node + SQL (MySQL)
+- Sequelize 
+- NoSQL/ MongoDB
+- Using Mongoose
+- Sessions & Cookies
+- Authentication 
+- Sending Emails 
+- Authentication Deep Dive 
+- User Input Validation 
+- Error Handling 
+- File Uploads/ Downloads 
+- Pagination 
+- Async Requests 
+- Handling Payments (Stripe)
+- Rest API Basics 
+- Advanced RestAPI features 
+- Using Async-Await 
+- Websockets/ Socket i.o 
+- GraphQL API's 
+- Deployment 
+- Beyond Web Servers 
+- TypeScript NodeJS 
+- DenoJS 
+- 
