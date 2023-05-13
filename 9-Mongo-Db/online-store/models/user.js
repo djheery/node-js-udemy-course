@@ -3,9 +3,10 @@ const mongoDb = require('mongodb');
 const ObjectId = mongoDb.ObjectId;
 
 class User {
-  constructor(username, email) {
+  constructor(username, email, cart) {
     this.username = username; 
     this.email = email; 
+    this.cart = cart;
   }
 
   save() {
@@ -14,6 +15,10 @@ class User {
            .insertOne(this)
            .then(res => res)
            .catch(err => console.log(err));
+  }
+
+  addToCart(product) {
+    const cartProduct = this.cart.items.findIndex(i => i._id === product._id);
   }
 
   static findById(userId) {
