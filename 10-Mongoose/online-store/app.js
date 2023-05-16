@@ -20,9 +20,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
-  User.findById('5baa2528563f16379fc8a610')
+  User.findById('645e7af1eef994fd5f531933')
     .then(user => {
-      req.user = new User(user.name, user.email, user.cart, user._id);
+      req.user = user;
       next();
     })
     .catch(err => console.log(err));
@@ -38,6 +38,17 @@ mongoose
     MONGO_DB_URL
   )
   .then(result => {
+    User.findOne().then(user => {
+      if(!user) {
+        const user = new User({
+          name: 'Daniel Heery',
+          email: 'heery@live.co.uk',
+          cart: {
+            items: []
+          }
+        })
+      }
+    })
     app.listen(3000);
   })
   .catch(err => {
